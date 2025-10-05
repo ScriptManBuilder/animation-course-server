@@ -8,7 +8,11 @@ async function bootstrap() {
   const allowedOrigins = process.env.ALLOWED_ORIGINS 
     ? process.env.ALLOWED_ORIGINS.split(',')
     : [ 
-        'https://animation-learn-courses-server.onrender.com/',
+        'https://animation-course-server.onrender.com',
+        'https://animation-learn.com',
+        'https://www.animation-learn.com',
+        'http://animation-learn.com',
+        'http://www.animation-learn.com',
         'https://animation-learn-course.com',
         'https://www.animation-learn-course.com',
         'http://animation-learn-course.com',
@@ -20,6 +24,8 @@ async function bootstrap() {
         'https://animation-learn-course.vercel.app',
         'https://animation-learn-course.netlify.app',
         'https://animation-learn-course.onrender.com',
+        'https://animation-learn.vercel.app',
+        'https://animation-learn.netlify.app',
       ]; // fallback для разработки
 
   // Настройка CORS
@@ -41,6 +47,6 @@ async function bootstrap() {
   
   console.log(`🚀 Animation Learning eCourses Backend запущен на порту ${port}`);
   console.log(`🌐 CORS разрешен для: ${allowedOrigins.join(', ')}`);
-  console.log(`📊 База данных: animation_learn_ecourses_db`);
+  console.log(`📊 База данных: External PostgreSQL`);
 }
 bootstrap();
